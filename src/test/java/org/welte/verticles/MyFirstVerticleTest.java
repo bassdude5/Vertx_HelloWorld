@@ -33,6 +33,7 @@ public class MyFirstVerticleTest {
 	public void testMyApplication(TestContext context) {
 		final Async async = context.async();
 
+		// Deprecated in 3.6.3
 		vertx.createHttpClient().getNow(portNum, url, endpoint, response -> {
 			response.handler(body -> {
 				context.assertTrue(body.toString().contains("Hello"));
